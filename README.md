@@ -18,3 +18,5 @@ Il faut absolument :
 - Dans MSI afterburner, mettre 5 profils différents
 - renseigner la consommation de ces derniers
 - installer les différentes bibliothèques : request, json, subprocess, sys, time
+
+bonus : trouver un moyen de ne plus devoir faire "autoriser" à chaque changement de profil sur MSI afterburner !
