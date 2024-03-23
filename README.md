@@ -14,4 +14,6 @@ Il faut absolument :
 - renseigner la consommation de ces derniers dans le main.py
 - installer les différentes bibliothèques : request, json, subprocess, sys, time
 
+Il est préférable de lancer le programme main.py avec l'aide d'un terminal ou cmd
+
 bonus : trouver un moyen de ne plus devoir faire "autoriser" à chaque changement de profil sur MSI afterburner !
