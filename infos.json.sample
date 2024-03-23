@@ -1,0 +1,9 @@
+[
+    {
+        "username": "mail@mail.com",
+        "password": "password",
+        "url": "https://envoy.local/production.json",
+        "temps": "60",
+        "envoy_serial": "991762001187"
+    }
+]
