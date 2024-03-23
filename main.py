@@ -5,6 +5,19 @@ import subprocess
 import sys
 import time
 
+
+# Lecture des informations à partir du fichier JSON
+with open("infos.json", "r") as f:
+    json_data = json.load(f)
+
+# Extraction des informations nécessaires
+credentials = json_data[0]
+user = credentials['username'] 
+password = credentials['password']
+url = credentials['url']
+temps = int(credentials['temps'])
+envoy_serial=credentials['envoy_serial']
+
 #initialisation nombre de profils utilisés 
 nombre_profil1 = 0
 nombre_profil2 = 0
@@ -33,10 +46,7 @@ conso_profil3=0
 conso_profil4=0
 conso_profil5=0
 
-# URL de l'API
-url = "https://envoy.local/production.json"
-
-token = get_token()
+token = get_token(user, password, envoy_serial)
 while True:
     # Ajouter le token à l'en-tête d'autorisation
     headers = {"Authorization": f"Bearer {token}"}
@@ -104,4 +114,4 @@ while True:
         print(f"Une erreur s'est produite lors du décodage JSON : {e}")
     except Exception as e:
         print(f"Une erreur s'est produite : {e}")
-    time.sleep(temps) #relancer le programme toutes les X secondes
+    time.sleep(temps) #relancer le programme toutes les X secondess
